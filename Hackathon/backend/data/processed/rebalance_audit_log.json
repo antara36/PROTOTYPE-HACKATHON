@@ -94,5 +94,91 @@
     "status_transition": "WARNING \u2794 WARNING",
     "risk_score_transition": "26.9 \u2794 21.0",
     "trades": []
+  },
+  {
+    "timestamp": "2026-09-06T00:09:13.732132",
+    "option_name": "Least-Disruptive Safe State (\u2b50 Recommended)",
+    "expected_return": 6.89,
+    "volatility": 3.79,
+    "turnover_pct": 1.9,
+    "status_transition": "SAFE \u2794 SAFE",
+    "risk_score_transition": "17.0 \u2794 11.2",
+    "trades": [
+      {
+        "asset": "NIFTY 50",
+        "action": "BUY",
+        "amount_inr": 12942.6,
+        "from_weight_pct": 0.1,
+        "to_weight_pct": 2.0,
+        "trade_statement": "BUY \u20b912,943 of NIFTY 50 (0.1% \u2192 2.0%)"
+      },
+      {
+        "asset": "Gold",
+        "action": "SELL",
+        "amount_inr": 4354.03,
+        "from_weight_pct": 2.9,
+        "to_weight_pct": 2.2,
+        "trade_statement": "SELL \u20b94,354 of Gold (2.9% \u2192 2.2%)"
+      },
+      {
+        "asset": "Govt Bonds",
+        "action": "SELL",
+        "amount_inr": 4411.82,
+        "from_weight_pct": 82.1,
+        "to_weight_pct": 81.4,
+        "trade_statement": "SELL \u20b94,412 of Govt Bonds (82.1% \u2192 81.4%)"
+      },
+      {
+        "asset": "Cash",
+        "action": "SELL",
+        "amount_inr": 4176.75,
+        "from_weight_pct": 14.9,
+        "to_weight_pct": 14.3,
+        "trade_statement": "SELL \u20b94,177 of Cash (14.9% \u2192 14.3%)"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-06T00:29:56.901879",
+    "option_name": "Least-Disruptive Safe State (\u2b50 Recommended)",
+    "expected_return": 4.6,
+    "volatility": 8.86,
+    "turnover_pct": 8.0,
+    "status_transition": "BREACH \u2794 SAFE",
+    "risk_score_transition": "44.7 \u2794 31.8",
+    "trades": [
+      {
+        "asset": "NIFTY 50",
+        "action": "SELL",
+        "amount_inr": 800000.0,
+        "from_weight_pct": 48.0,
+        "to_weight_pct": 40.0,
+        "trade_statement": "SELL \u20b9800,000 of NIFTY 50 (48.0% \u2192 40.0%)"
+      },
+      {
+        "asset": "Gold",
+        "action": "BUY",
+        "amount_inr": 262110.91,
+        "from_weight_pct": 15.0,
+        "to_weight_pct": 17.6,
+        "trade_statement": "BUY \u20b9262,111 of Gold (15.0% \u2192 17.6%)"
+      },
+      {
+        "asset": "Govt Bonds",
+        "action": "BUY",
+        "amount_inr": 267855.56,
+        "from_weight_pct": 22.0,
+        "to_weight_pct": 24.7,
+        "trade_statement": "BUY \u20b9267,856 of Govt Bonds (22.0% \u2192 24.7%)"
+      },
+      {
+        "asset": "Cash",
+        "action": "BUY",
+        "amount_inr": 270033.53,
+        "from_weight_pct": 15.0,
+        "to_weight_pct": 17.7,
+        "trade_statement": "BUY \u20b9270,034 of Cash (15.0% \u2192 17.7%)"
+      }
+    ]
   }
 ]

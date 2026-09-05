@@ -1,0 +1,332 @@
+/* ==========================================================================
+   FINCAP GUARD — Modern Fintech Design System
+   Inspired by clean, high-contrast pastel cards with sleek dark sidebar
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
+
+/* --- Global Typography & Canvas ----------------------------------------- */
+html, body, [data-testid="stAppViewContainer"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background-color: #FAF7F2 !important;
+    color: #18181B !important;
+}
+
+.stApp {
+    background-color: #FAF7F2 !important;
+    color: #18181B !important;
+}
+
+.main .block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+    max-width: 1400px !important;
+}
+
+/* --- Sidebar Styling (Rich Dark Panel) ----------------------------------- */
+section[data-testid="stSidebar"],
+div[data-testid="stSidebar"],
+[data-testid="stSidebarContent"],
+[data-testid="stSidebarUserContent"] {
+    background-color: #121214 !important;
+    color: #F4F4F5 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Sidebar Headings & Labels */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] div {
+    color: #E4E4E7;
+}
+
+/* Sidebar Radio Navigation */
+[data-testid="stSidebar"] [data-testid="stRadio"] > div {
+    gap: 4px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] label {
+    background: transparent !important;
+    border-radius: 12px !important;
+    padding: 10px 14px !important;
+    margin-bottom: 2px !important;
+    color: #A1A1AA !important;
+    transition: all 0.18s ease-in-out !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    border: 1px solid transparent !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #FFFFFF !important;
+}
+
+/* Checked/Active Navigation Item */
+[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked),
+[data-testid="stSidebar"] [data-testid="stRadio"] label[aria-checked="true"],
+[data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] {
+    background: #27272A !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p,
+[data-testid="stSidebar"] [data-testid="stRadio"] label[aria-checked="true"] p,
+[data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] p {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] label p {
+    color: #A1A1AA !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    letter-spacing: -0.1px !important;
+}
+
+/* Hide native radio circles */
+[data-testid="stSidebar"] [data-testid="stRadio"] input[type="radio"],
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label > div:first-child {
+    display: none !important;
+}
+
+/* Sidebar divider */
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    margin: 16px 0 !important;
+}
+
+/* Sidebar Button (e.g. Sign Out) */
+[data-testid="stSidebar"] .stButton > button {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #E4E4E7 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    padding: 10px 16px !important;
+    width: 100% !important;
+    transition: all 0.2s ease !important;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: rgba(239, 68, 68, 0.18) !important;
+    color: #FCA5A5 !important;
+    border-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+/* --- Main Area Headings -------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+    color: #18181B !important;
+    letter-spacing: -0.4px !important;
+}
+
+h1 { font-size: 1.95rem !important; font-weight: 800 !important; }
+h2 { font-size: 1.4rem !important; font-weight: 700 !important; }
+h3 { font-size: 1.15rem !important; font-weight: 700 !important; }
+
+/* Hide header anchor links */
+a[href^="#"] { display: none !important; }
+
+/* --- Metrics ------------------------------------------------------------- */
+div[data-testid="stMetric"] {
+    background: #FFFFFF !important;
+    border-radius: 18px !important;
+    padding: 18px 20px !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid #E4E4E7 !important;
+}
+
+div[data-testid="stMetricLabel"] {
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    color: #71717A !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 1.7rem !important;
+    font-weight: 800 !important;
+    color: #18181B !important;
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+}
+
+/* --- Action Buttons (Sleek Black Pills) ---------------------------------- */
+.stButton > button,
+.stButton > button[kind="primary"] {
+    background: #18181B !important;
+    color: #FFFFFF !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    padding: 10px 24px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+}
+
+.stButton > button:hover,
+.stButton > button[kind="primary"]:hover {
+    background: #27272A !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+}
+
+.stButton > button[kind="secondary"] {
+    background: #FFFFFF !important;
+    color: #18181B !important;
+    border: 1.5px solid #E4E4E7 !important;
+    border-radius: 9999px !important;
+    font-weight: 600 !important;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background: #F4F4F5 !important;
+    border-color: #D4D4D8 !important;
+}
+
+/* --- Form Inputs (Inputs, Numbers, Selectboxes) -------------------------- */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stTextArea textarea,
+div[data-baseweb="input"] input,
+div[data-baseweb="base-input"] input {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #E4E4E7 !important;
+    border-radius: 12px !important;
+    color: #18181B !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    padding: 10px 14px !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+.stTextArea textarea:focus {
+    border-color: #18181B !important;
+    box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1) !important;
+}
+
+/* Selectbox */
+div[data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #E4E4E7 !important;
+    border-radius: 12px !important;
+    color: #18181B !important;
+}
+
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] div {
+    color: #18181B !important;
+}
+
+div[data-baseweb="popover"],
+ul[role="listbox"],
+li[role="option"] {
+    background-color: #FFFFFF !important;
+    color: #18181B !important;
+}
+
+li[role="option"]:hover,
+li[role="option"][aria-selected="true"] {
+    background-color: #F4F4F5 !important;
+    color: #18181B !important;
+}
+
+/* --- Expanders ----------------------------------------------------------- */
+[data-testid="stExpander"] {
+    background: #FFFFFF !important;
+    border: 1px solid #E4E4E7 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    overflow: hidden !important;
+    margin-bottom: 10px !important;
+}
+
+[data-testid="stExpander"] details {
+    background: #FFFFFF !important;
+}
+
+[data-testid="stExpander"] summary {
+    font-weight: 700 !important;
+    color: #18181B !important;
+    padding: 12px 16px !important;
+}
+
+[data-testid="stExpander"] summary:hover {
+    color: #3B82F6 !important;
+}
+
+[data-testid="stExpander"] [data-testid="stExpanderDetails"] {
+    background: #FFFFFF !important;
+    color: #18181B !important;
+    padding: 14px 18px !important;
+    border-top: 1px solid #F4F4F5 !important;
+}
+
+/* --- Tabs ---------------------------------------------------------------- */
+.stTabs [data-baseweb="tab-list"] {
+    background: #FFFFFF !important;
+    border-radius: 14px !important;
+    padding: 5px !important;
+    gap: 6px !important;
+    border: 1px solid #E4E4E7 !important;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    color: #71717A !important;
+    padding: 8px 18px !important;
+    border: none !important;
+    transition: all 0.15s ease !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #18181B !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* --- DataFrames / Tables ------------------------------------------------- */
+[data-testid="stDataFrame"] {
+    background: #FFFFFF !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1px solid #E4E4E7 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* --- Divider & Captions -------------------------------------------------- */
+hr {
+    border: none !important;
+    border-top: 1px solid #E4E4E7 !important;
+    margin: 24px 0 !important;
+}
+
+.stCaption, small {
+    color: #71717A !important;
+    font-size: 0.82rem !important;
+}
+
+/* --- Card Utilities ------------------------------------------------------ */
+.fincap-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fincap-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
