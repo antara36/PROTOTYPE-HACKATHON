@@ -1,0 +1,7 @@
+Asset,Asset_Class,Liquidity_Score,Is_Liquid,Liquidation_Days,Haircut_Pct
+NIFTY 50,Equity,0.95,Yes,1,0.02
+Gold,Commodity,0.85,Yes,1,0.03
+Govt Bonds,Fixed Income,0.90,Yes,2,0.01
+Cash,Cash,1.00,Yes,0,0.00
+Corporate Bonds,Fixed Income,0.60,Medium,7,0.08
+Private Assets,Alternative,0.10,No,30,0.25

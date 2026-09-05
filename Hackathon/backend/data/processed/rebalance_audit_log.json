@@ -1,0 +1,98 @@
+[
+  {
+    "timestamp": "2026-09-05T15:26:00.665353",
+    "option_name": "Least-Disruptive Safe State (\u2b50 Recommended)",
+    "expected_return": 5.07,
+    "volatility": 8.67,
+    "turnover_pct": 8.0,
+    "status_transition": "BREACH \u2794 SAFE",
+    "risk_score_transition": "44.5 \u2794 31.6",
+    "trades": [
+      {
+        "asset": "NIFTY 50",
+        "action": "SELL",
+        "amount_inr": 800000.0,
+        "from_weight_pct": 48.0,
+        "to_weight_pct": 40.0,
+        "trade_statement": "SELL \u20b9800,000 of NIFTY 50 (48.0% \u2192 40.0%)"
+      },
+      {
+        "asset": "Gold",
+        "action": "BUY",
+        "amount_inr": 262153.24,
+        "from_weight_pct": 15.0,
+        "to_weight_pct": 17.6,
+        "trade_statement": "BUY \u20b9262,153 of Gold (15.0% \u2192 17.6%)"
+      },
+      {
+        "asset": "Govt Bonds",
+        "action": "BUY",
+        "amount_inr": 267842.71,
+        "from_weight_pct": 22.0,
+        "to_weight_pct": 24.7,
+        "trade_statement": "BUY \u20b9267,843 of Govt Bonds (22.0% \u2192 24.7%)"
+      },
+      {
+        "asset": "Cash",
+        "action": "BUY",
+        "amount_inr": 270004.05,
+        "from_weight_pct": 15.0,
+        "to_weight_pct": 17.7,
+        "trade_statement": "BUY \u20b9270,004 of Cash (15.0% \u2192 17.7%)"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-05T17:07:13.107190",
+    "option_name": "Return-Preserving Rebalance",
+    "expected_return": 26.19,
+    "volatility": 12.64,
+    "turnover_pct": 58.1,
+    "status_transition": "WARNING \u2794 WARNING",
+    "risk_score_transition": "18.3 \u2794 21.0",
+    "trades": [
+      {
+        "asset": "NIFTY 50",
+        "action": "BUY",
+        "amount_inr": 103020.0,
+        "from_weight_pct": 0.0,
+        "to_weight_pct": 2.0,
+        "trade_statement": "BUY \u20b9103,020 of NIFTY 50 (0.0% \u2192 2.0%)"
+      },
+      {
+        "asset": "Gold",
+        "action": "BUY",
+        "amount_inr": 2920850.0,
+        "from_weight_pct": 28.8,
+        "to_weight_pct": 85.0,
+        "trade_statement": "BUY \u20b92,920,850 of Gold (28.8% \u2192 85.0%)"
+      },
+      {
+        "asset": "Govt Bonds",
+        "action": "SELL",
+        "amount_inr": 1627890.0,
+        "from_weight_pct": 42.3,
+        "to_weight_pct": 11.0,
+        "trade_statement": "SELL \u20b91,627,890 of Govt Bonds (42.3% \u2192 11.0%)"
+      },
+      {
+        "asset": "Cash",
+        "action": "SELL",
+        "amount_inr": 1395980.0,
+        "from_weight_pct": 28.8,
+        "to_weight_pct": 2.0,
+        "trade_statement": "SELL \u20b91,395,980 of Cash (28.8% \u2192 2.0%)"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-05T17:07:21.749778",
+    "option_name": "Return-Preserving Rebalance",
+    "expected_return": 26.19,
+    "volatility": 12.64,
+    "turnover_pct": 0.0,
+    "status_transition": "WARNING \u2794 WARNING",
+    "risk_score_transition": "26.9 \u2794 21.0",
+    "trades": []
+  }
+]
