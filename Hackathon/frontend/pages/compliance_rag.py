@@ -63,17 +63,28 @@ def show_compliance_rag(system, state):
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ── Policy Co-Pilot Section ───────────────────────────────────────────────
+    llm_active = system.rag_engine.is_llm_enabled()
+    engine_badge = (
+        f'<span style="background:{COLOR_SUCCESS}; color:#fff; font-size:0.75rem; font-weight:700; '
+        f'padding:4px 10px; border-radius:9999px; margin-left:8px;">✨ Gemini AI Co-Pilot Active</span>'
+        if llm_active else
+        f'<span style="background:{SIDEBAR_ACCENT}; color:#fff; font-size:0.75rem; font-weight:700; '
+        f'padding:4px 10px; border-radius:9999px; margin-left:8px;">🛡️ Grounded Policy Knowledge Store Active</span>'
+    )
+
     st.markdown(f"""
     <div class="fincap-card" style="background:{FILL_PURPLE}; border:1.5px solid {BORDER_PURPLE};
          border-radius:20px; padding:22px 26px; margin-bottom:20px;
          box-shadow:0 2px 10px rgba(0,0,0,0.03);">
-        <div style="font-size:1.05rem; font-weight:800; color:{TEXT_PRIMARY};
-                    font-family:{FONT_FAMILY}; margin-bottom:4px;">
-            💬 Ask the Compliance &amp; Policy Co-Pilot
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <div style="font-size:1.05rem; font-weight:800; color:{TEXT_PRIMARY};
+                        font-family:{FONT_FAMILY};">
+                💬 Compliance &amp; Policy Co-Pilot {engine_badge}
+            </div>
         </div>
-        <div style="font-size:0.86rem; color:{TEXT_MUTED}; font-weight:500;">
+        <div style="font-size:0.86rem; color:{TEXT_MUTED}; font-weight:500; margin-top:6px;">
             Ask questions about internal limits, liquidity requirements, stress scenario parameters,
-            or Basel reference guidelines.
+            or Basel reference guidelines. Grounded in institutional policies.
         </div>
     </div>
     """, unsafe_allow_html=True)
