@@ -24,7 +24,8 @@ def show_recommendations(system, state):
 
     decision    = state["decision_data"]
     options     = decision["all_options"]
-    current_df  = system.portfolio_service.get_current_portfolio()
+    user_id     = state.get("user_id")
+    current_df  = system.portfolio_service.get_current_portfolio(user_id=user_id)
 
     # Strategy Selector
     option_choice = st.radio(
@@ -82,7 +83,7 @@ def show_recommendations(system, state):
 
     with col_exec:
         if st.button("🚀 Commit & Execute Rebalance", type="primary", use_container_width=True):
-            result = system.apply_recommended_rebalance(current_df, selected_opt["code"])
+            result = system.apply_recommended_rebalance(current_df, selected_opt["code"], user_id=user_id)
             st.session_state["verification_cert"] = result["verification_cert"]
             st.toast("Rebalance successfully executed and verified!", icon="✅")
             st.rerun()

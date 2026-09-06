@@ -95,7 +95,8 @@ def show_portfolio(system, state):
         if btn_save:
             updated_data = [{"Asset": k, "Amount_INR": v} for k, v in new_amounts.items()]
             new_port_df  = pd.DataFrame(updated_data)
-            system.portfolio_service.update_portfolio(new_port_df)
+            user_id = state.get("user_id")
+            system.portfolio_service.update_portfolio(new_port_df, user_id=user_id)
             st.success("Portfolio successfully updated! Recalculating controls...")
             st.rerun()
 
@@ -109,6 +110,7 @@ def show_portfolio(system, state):
             {"Asset": "Govt Bonds",  "Amount_INR": 2200000.0},
             {"Asset": "Cash",        "Amount_INR": 1500000.0},
         ]
-        system.portfolio_service.update_portfolio(pd.DataFrame(default_data))
+        user_id = state.get("user_id")
+        system.portfolio_service.update_portfolio(pd.DataFrame(default_data), user_id=user_id)
         st.success("Portfolio reset to default state.")
         st.rerun()
